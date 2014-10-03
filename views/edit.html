@@ -1,0 +1,17 @@
+{% extends "layout.html" %} 
+
+{% block content %}
+    <h3>EDIT THIS PAGE</h3>
+    <div id='editpage'>
+     <form action="/wiki/{{thispage.id}}/edit" method="POST">
+      <label for="name_field">PAGE TITLE</label>
+      <br>
+      <textarea name="title" autofocus type="text" rows='2' style="width: 600px">{{thispage.title}}</textarea>
+      <br>
+      <label for="text_field">PAGE CONTENT</label>
+      <br>
+      <textarea name="body" type="text"  rows="20"  style="width: 600px">{{thispage.body}}</textarea> 
+      <input type="submit" value="Update"/>
+    </form>
+    </div>
+{% endblock %}

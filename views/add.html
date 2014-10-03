@@ -1,0 +1,18 @@
+{% extends "layout.html" %} 
+
+{% block content %}
+    <h3>ADD A PAGE</h3>
+    <div id='addpage'>
+     <form action="/add/submit" method="POST">
+      <label for="name_field">PAGE TITLE</label>
+      <br>
+      <textarea name="title" autofocus type="text" id="title_field" rows='2' style="width: 600px"></textarea>
+      <br>
+      <label for="text_field">PAGE CONTENT</label>
+      <br>
+      <textarea name="body" type="text" id="content_field" rows="20"  style="width: 600px"></textarea> 
+      <input type="submit" value="Submit"/>
+    </form>
+    </div>
+{% endblock %}
+

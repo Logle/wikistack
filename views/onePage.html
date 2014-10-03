@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	<br>
+	<br>
+	<br>
+    <h3>{{thispage.title}}</h3>
+    <br>
+    <div>
+    	{{thispage.body|marked}}
+    </div>
+    <br>
+    <div class="btn-group">
+  		<a href="/wiki/{{thispage.url_name}}/update" >
+  			<button type="button" class="btn btn-default">UPDATE</button>
+  		</a>
+ 		<a href="/wiki/{{thispage.url_name}}/delete" >
+  			<button type="button" class="btn btn-default">DELETE</button>
+  		</a>
+	</div>
+{% endblock %}s

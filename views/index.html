@@ -1,0 +1,25 @@
+{% extends "layout.html" %}	
+{{ doc|page_link }} 
+
+{% block content %}
+    <h3>{{title}}</h3>
+   	<ul>
+   		<li>Fullstack Home</li>
+   		<li>About Me</li>
+   		<li>My Projects</li>
+   		<li>My City</li>
+   		<li>Code I've written</li>
+   	</ul>
+
+{% if docs.length > 0 %}
+  <ul>
+    {% for doc in docs %}
+      <li>{{doc|page_link}}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  There are no pages. Why don't you <a href='/add'>add one</a>?
+{% endif %}
+
+   	
+{% endblock %}
