@@ -6,10 +6,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+//var bcrypt = require('bcryptjs');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var add_routes = require('./routes/add');
+
 
 var app = express();
 app.engine('html', swig.renderFile);

@@ -19,8 +19,9 @@ var pageSchema = new Schema({
 var userSchema = new Schema({
   name:  {
       first: String,
-      last: String
-    },
+      last: String,
+  },
+  password: String,
   email: String
 });
  
